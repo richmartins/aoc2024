@@ -16,12 +16,7 @@ def get_cord(file_name):
     lists = read_file(file_name)
     sum = 0
     for x1, x2 in zip(lists[0], lists[1]):
-        if x1 > x2:
-            sum += x1 - x2
-        elif x1 < x2:
-            sum += x2 - x1
-        else:
-            pass
+        sum += abs(x1 - x2)
 
     return sum
 
